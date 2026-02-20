@@ -123,7 +123,7 @@ function buildUrl(
 
 	// Object.entries is ES2017; tsconfig lib only includes up to ES7 (ES2016).
 	// Use Object.keys (ES5) + bracket access instead.
-	const keys = Object.keys(params) as Array<keyof typeof params>;
+	const keys = Object.keys(params);
 	for (const key of keys) {
 		const value = params[key];
 		if (value !== undefined) {
