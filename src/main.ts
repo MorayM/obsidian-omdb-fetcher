@@ -10,7 +10,7 @@ export default class OmdbFetcher extends Plugin {
 
 		this.addCommand({
 			id: 'fetch-movie-data',
-			name: 'Fetch movie data',
+			name: 'OMDb: Fetch movie data',
 			editorCheckCallback: (checking, editor) => {
 				const view = this.app.workspace.getActiveViewOfType(MarkdownView);
 				if (!view) return false;
