@@ -9,7 +9,8 @@ export default class OmdbFetcher extends Plugin {
 		await this.loadSettings();
 
 		this.addCommand({
-			id: 'fetch-movie-data',
+			id: 'omdb:fetch-movie-data-by-title-year',
+            // eslint-disable-next-line obsidianmd/ui/sentence-case
 			name: 'OMDb: Fetch movie data',
 			editorCheckCallback: (checking, editor) => {
 				const view = this.app.workspace.getActiveViewOfType(MarkdownView);
