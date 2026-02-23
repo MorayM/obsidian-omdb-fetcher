@@ -16,6 +16,13 @@ export function applyTemplate(
 	let replaced = 0;
 	const result = content.replace(PLACEHOLDER_REGEX, (match, key: string) => {
 		if (EXCLUDED_KEYS.has(key)) return match;
+		if (key === 'imdbLink') {
+			if (data.imdbID) {
+				replaced++;
+				return `https://www.imdb.com/title/${data.imdbID}`;
+			}
+			return match;
+		}
 		if (!(key in data)) return match;
 		const value = (data as unknown as Record<string, unknown>)[key];
 		if (typeof value !== 'string' && typeof value !== 'number') return match;
