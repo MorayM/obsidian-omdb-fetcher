@@ -1,7 +1,7 @@
 import {Editor, MarkdownView, Notice} from 'obsidian';
 import type OmdbFetcher from '../main';
 import {fetchByTitle, OmdbError} from '../utils/api';
-import {applyTemplate} from '../utils/template';
+import {applyMovieResultToEditor} from './apply-movie-result';
 
 const FILENAME_PATTERN = /^(.+)\s+\((\d{4})\)$/;
 
@@ -24,14 +24,7 @@ export async function fetchMovieData(editor: Editor, view: MarkdownView, plugin:
 
 	try {
 		const result = await fetchByTitle(plugin.settings.omdbApiKey, title, {year});
-		const {content, replaced} = applyTemplate(editor.getValue(), result);
-		if (replaced === 0) {
-			new Notice('No {=...=} placeholders found in note');
-			return;
-		}
-
-		editor.setValue(content);
-		new Notice(`Fetched data for "${result.Title}"`);
+		applyMovieResultToEditor(editor, result);
 	} catch (err) {
 		const msg = err instanceof OmdbError ? err.message : 'Unknown error fetching movie data';
 		new Notice(msg);
