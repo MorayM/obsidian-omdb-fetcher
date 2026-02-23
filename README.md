@@ -1,6 +1,6 @@
 # OMDb Fetcher
 
-Fetches movie and TV data from [OMDb](https://www.omdbapi.com/) and fills placeholders in the current note.
+Fetches movie and TV data from [OMDb](https://www.omdbapi.com/) and fills placeholders in the current note. It's not designed to be a fully-featured movie library plugin, but to work alongside plugins like [QuickAdd](https://quickadd.obsidian.guide/) and [Templater](https://silentvoid13.github.io/Templater/introduction.html) which create notes, and then this plugin populates them.
 
 ## Setup
 
@@ -8,23 +8,15 @@ You need an OMDb API key (free at [omdbapi.com](https://www.omdbapi.com/apikey.a
 
 ## Commands
 
-All three commands require an active Markdown note; they replace `{=...=}` placeholders in the current editor.
+All three commands require an active Markdown note; they replace `{=...=}` placeholders in the current page.
 
 | Command | Behavior |
 |--------|----------|
 | **OMDb: Fetch movie data from filename** | Parses the note filename as `Name (Year)` and fetches by title and year. Shows a notice if the filename does not match. |
 | **OMDb: Fetch movie data by title and year** | Opens a modal to enter title and optional year, then fetches and applies. |
-| **OMDb: Fetch movie data by IMDb ID** | Opens a modal to enter IMDb ID (e.g. `tt1285016`), then fetches and applies. |
+| **OMDb: Fetch movie data by IMDb ID** | Opens a modal to enter IMDb ID (e.g. `tt0080455`), then fetches and applies. |
 
 ## Placeholders
-
-Syntax: `{=key=}`. Keys come from the OMDb detail response; one synthetic key is supported.
-
-**Synthetic placeholder**
-
-- `{=imdbLink=}` — expands to `https://www.imdb.com/title/<imdbID>`.
-
-**OMDb response keys** (optional fields may be missing for some titles):
 
 | Placeholder | Description |
 |-------------|-------------|
@@ -52,8 +44,21 @@ Syntax: `{=key=}`. Keys come from the OMDb detail response; one synthetic key is
 | `Production` | Production company |
 | `Website` | Official website URL |
 | `totalSeasons` | Number of seasons (series) |
+| `imdbLink` | Link to IMDb's page for this title |
 
 If no placeholders are replaced, the plugin shows: “No {=...=} placeholders found in note”.
+
+### Examples
+
+```txt
+[{=Title=} ({=Year=})]({=imdbLink=})
+```
+
+Expands to a clickable link in your note.
+
+```txt
+[The Blues Brothers (1980)](https://www.imdb.com/title/tt0080455)
+```
 
 ## Privacy and network
 
