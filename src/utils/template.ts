@@ -23,6 +23,10 @@ export function applyTemplate(
 			}
 			return match;
 		}
+		if (key === 'raw') {
+			replaced++;
+			return JSON.stringify(data, null, 2);
+		}
 		if (!(key in data)) return match;
 		const value = (data as unknown as Record<string, unknown>)[key];
 		if (typeof value !== 'string' && typeof value !== 'number') return match;

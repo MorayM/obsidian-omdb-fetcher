@@ -45,6 +45,7 @@ All three commands require an active Markdown note; they replace `{=...=}` place
 | `Website` | Official website URL |
 | `totalSeasons` | Number of seasons (series) |
 | `imdbLink` | Link to IMDb's page for this title |
+| `raw` | The raw JSON response from OMDb |
 
 If no placeholders are replaced, the plugin shows: “No {=...=} placeholders found in note”.
 
@@ -54,7 +55,7 @@ If no placeholders are replaced, the plugin shows: “No {=...=} placeholders fo
 [{=Title=} ({=Year=})]({=imdbLink=})
 ```
 
-Expands to a clickable link in your note.
+Expands to a clickable link in your note
 
 ```txt
 [The Blues Brothers (1980)](https://www.imdb.com/title/tt0080455)
