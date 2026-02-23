@@ -45,6 +45,7 @@ export class SearchByImdbIdModal extends Modal {
 					const result = await fetchById(
 						this.plugin.settings.omdbApiKey,
 						trimmed,
+						{ plot: this.plugin.settings.omdbPlotType },
 					);
 					if (applyMovieResultToEditor(this.editor, result)) {
 						this.close();

@@ -23,7 +23,7 @@ export async function fetchMovieData(editor: Editor, view: MarkdownView, plugin:
 	const year = parseInt(match[2] as string, 10);
 
 	try {
-		const result = await fetchByTitle(plugin.settings.omdbApiKey, title, {year});
+		const result = await fetchByTitle(plugin.settings.omdbApiKey, title, { year, plot: plugin.settings.omdbPlotType });
 		applyMovieResultToEditor(editor, result);
 	} catch (err) {
 		const msg = err instanceof OmdbError ? err.message : 'Unknown error fetching movie data';

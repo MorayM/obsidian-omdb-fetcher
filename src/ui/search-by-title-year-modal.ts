@@ -62,7 +62,7 @@ export class SearchByTitleYearModal extends Modal {
 					const result = await fetchByTitle(
 						this.plugin.settings.omdbApiKey,
 						trimmedTitle,
-						{year},
+						{ year, plot: this.plugin.settings.omdbPlotType },
 					);
 					if (applyMovieResultToEditor(this.editor, result)) {
 						this.close();

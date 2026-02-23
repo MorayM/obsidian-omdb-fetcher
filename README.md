@@ -4,7 +4,7 @@ Fetches movie and TV data from [OMDb](https://www.omdbapi.com/) and fills placeh
 
 ## Setup
 
-You need an OMDb API key (free at [omdbapi.com](https://www.omdbapi.com/apikey.aspx)). Set it under **Settings → Community plugins → OMDb Fetcher**.
+You need an OMDb API key (free at [omdbapi.com](https://www.omdbapi.com/apikey.aspx)). Set it under **Settings → Community plugins → OMDb Fetcher**. You can choose whether to fetch a short or full plot under the same settings page.
 
 ## Commands
 
@@ -39,7 +39,7 @@ Syntax: `{=key=}`. Keys come from the OMDb detail response; one synthetic key is
 | `Director` | Director(s) |
 | `Writer` | Writer(s) |
 | `Actors` | Cast |
-| `Plot` | Plot (short or full per request) |
+| `Plot` | Plot (short or full; controlled by OMDb plot type setting) |
 | `Language` | Language(s) |
 | `Country` | Country/countries |
 | `Awards` | Awards text |
