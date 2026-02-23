@@ -1,7 +1,8 @@
 {
-	"name": "obsidian-sample-plugin",
+	"name": "obsidian-omdb-fetcher",
 	"version": "1.0.0",
-	"description": "This is a sample plugin for Obsidian (https://obsidian.md)",
+	"description": "Fetches data about movies and TV shows from OMDb into your notes.",
+	"author": "Moray Macdonald",
 	"main": "main.js",
 	"type": "module",
 	"scripts": {
