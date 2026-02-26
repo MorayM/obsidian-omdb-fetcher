@@ -1,6 +1,6 @@
 import type {OmdbDetailResult} from './api';
 
-const PLACEHOLDER_REGEX = /\{=(\w+)=\}/g;
+const PLACEHOLDER_REGEX = /\{=omdb:(\w+)=\}/g;
 
 const EXCLUDED_KEYS = new Set(['Response']);
 

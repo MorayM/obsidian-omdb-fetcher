@@ -8,7 +8,7 @@ You need an OMDb API key (free at [omdbapi.com](https://www.omdbapi.com/apikey.a
 
 ## Commands
 
-All three commands require an active Markdown note; they replace `{=...=}` placeholders in the current page.
+All three commands require an active Markdown note; they replace `{=omdb:...=}` placeholders in the current page.
 
 | Command | Behavior |
 |--------|----------|
@@ -47,12 +47,12 @@ All three commands require an active Markdown note; they replace `{=...=}` place
 | `imdbLink` | Link to IMDb's page for this title |
 | `raw` | The raw JSON response from OMDb |
 
-If no placeholders are replaced, the plugin shows: “No {=...=} placeholders found in note”.
+If no placeholders are replaced, the plugin shows: "No {=omdb:...=} placeholders found in note".
 
 ### Examples
 
 ```txt
-[{=Title=} ({=Year=})]({=imdbLink=})
+[{=omdb:Title=} ({=omdb:Year=})]({=omdb:imdbLink=})
 ```
 
 Expands to a clickable link in your note
@@ -67,4 +67,4 @@ Data is sent to OMDb only when you run a command. The plugin does not send telem
 
 ## Manual install
 
-Copy `main.js`, `manifest.json` (and `styles.css` if present) into your vault’s `.obsidian/plugins/obsidian-omdb-fetcher/` folder, then enable the plugin under **Settings → Community plugins**.
+Copy `main.js`, `manifest.json` (and `styles.css` if present) into your vault's `.obsidian/plugins/obsidian-omdb-fetcher/` folder, then enable the plugin under **Settings → Community plugins**.
