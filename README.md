@@ -47,7 +47,7 @@ All three commands require an active Markdown note; they replace `{=omdb:...=}` 
 | `imdbLink` | Link to IMDb's page for this title |
 | `raw` | The raw JSON response from OMDb |
 
-If no placeholders are replaced, the plugin shows: "No {=omdb:...=} placeholders found in note".
+If no placeholders are replaced, the message "No {=omdb:...=} placeholders found in note" will be shown.
 
 ### Examples
 
@@ -67,4 +67,4 @@ Data is sent to OMDb only when you run a command. The plugin does not send telem
 
 ## Manual install
 
-Copy `main.js`, `manifest.json` (and `styles.css` if present) into your vault's `.obsidian/plugins/obsidian-omdb-fetcher/` folder, then enable the plugin under **Settings → Community plugins**.
+Copy `main.js`, `manifest.json` (and `styles.css` if present) into your vault's `.obsidian/plugins/omdb-fetcher/` folder, then enable the plugin under **Settings → Community plugins**.

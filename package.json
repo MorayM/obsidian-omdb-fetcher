@@ -1,5 +1,5 @@
 {
-	"name": "obsidian-omdb-fetcher",
+	"name": "omdb-fetcher",
 	"version": "1.0.0",
 	"description": "Fetches data about movies and TV shows from OMDb into your notes.",
 	"author": "Moray Macdonald",
@@ -12,7 +12,7 @@
 		"lint": "eslint ."
 	},
 	"keywords": [],
-	"license": "0-BSD",
+	"license": "GPL-3.0-or-later",
 	"devDependencies": {
 		"@types/node": "^16.11.6",
 		"esbuild": "0.25.5",
