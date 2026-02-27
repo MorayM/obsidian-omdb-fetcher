@@ -18,6 +18,8 @@ All three commands require an active Markdown note; they replace `{=omdb:...=}` 
 
 ## Placeholders
 
+If you've used my other plugin [OSM Fetcher](https://github.com/MorayM/osm-fetcher) then this will be familiar to you!
+
 | Placeholder | Description |
 |-------------|-------------|
 | `Title` | Title |
