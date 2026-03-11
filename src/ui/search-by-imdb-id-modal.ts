@@ -16,13 +16,11 @@ export class SearchByImdbIdModal extends Modal {
 	onOpen() {
 		const {contentEl} = this;
 		contentEl.empty();
-		// eslint-disable-next-line obsidianmd/ui/sentence-case
 		contentEl.createEl('h2', {text: 'Fetch movie by IMDb ID'});
 
 		let imdbId = '';
 
 		new Setting(contentEl)
-			// eslint-disable-next-line obsidianmd/ui/sentence-case
 			.setName('IMDb ID')
 			.addText((text) =>
 				text
@@ -36,7 +34,6 @@ export class SearchByImdbIdModal extends Modal {
 			btn.setButtonText('Fetch').onClick(async () => {
 				const trimmed = imdbId.trim();
 				if (!trimmed) {
-					// eslint-disable-next-line obsidianmd/ui/sentence-case
 					new Notice('Enter an IMDb ID');
 					return;
 				}

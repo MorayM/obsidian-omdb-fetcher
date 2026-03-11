@@ -1,7 +1,7 @@
 {
 	"id": "omdb-fetcher",
 	"name": "OMDb Fetcher",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"minAppVersion": "1.11.7",
 	"description": "Fetches data about movies and TV shows from OMDb into your notes.",
 	"author": "Moray Macdonald",

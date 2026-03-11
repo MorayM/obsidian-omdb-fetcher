@@ -14,8 +14,7 @@ export async function fetchMovieData(editor: Editor, view: MarkdownView, plugin:
 
 	const match = file.basename.match(FILENAME_PATTERN);
 	if (!match) {
-		// eslint-disable-next-line obsidianmd/ui/sentence-case
-		new Notice('Filename must be in the format: Name (Year)');
+		new Notice('Filename must be in the format: name (year)');
 		return;
 	}
 
