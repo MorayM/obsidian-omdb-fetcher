@@ -4,6 +4,7 @@ import globals from "globals";
 import { globalIgnores } from "eslint/config";
 
 export default tseslint.config(
+	...obsidianmd.configs.recommended,
 	{
 		languageOptions: {
 			globals: {
@@ -20,8 +21,16 @@ export default tseslint.config(
 				extraFileExtensions: ['.json']
 			},
 		},
+		plugins: {
+			obsidianmd
+		},
+		rules: {
+			"obsidianmd/ui/sentence-case": ["error", {
+				"acronyms": ["IMDb", "OMDb", "API"],
+				"allowAutoFix": true
+			}]
+		}
 	},
-	...obsidianmd.configs.recommended,
 	globalIgnores([
 		"node_modules",
 		"dist",

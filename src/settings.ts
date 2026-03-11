@@ -25,10 +25,7 @@ export class OmdbFetcherSettingTab extends PluginSettingTab {
 		containerEl.empty();
 
 		new Setting(containerEl)
-			// OMDb is not valid sentance case
-			// eslint-disable-next-line obsidianmd/ui/sentence-case
 			.setName('OMDb API key')
-			// eslint-disable-next-line obsidianmd/ui/sentence-case
 			.setDesc('Enter your OMDb API key')
 			.addText(text => text
 				.setPlaceholder('Enter your secret')
@@ -39,10 +36,7 @@ export class OmdbFetcherSettingTab extends PluginSettingTab {
 				}));
 
 		new Setting(containerEl)
-			// OMDb is not valid sentence case
-			// eslint-disable-next-line obsidianmd/ui/sentence-case
 			.setName('OMDb plot type')
-			// eslint-disable-next-line obsidianmd/ui/sentence-case
 			.setDesc('Short or full plot in OMDb responses.')
 			.addDropdown((dropdown) =>
 				dropdown

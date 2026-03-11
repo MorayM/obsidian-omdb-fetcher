@@ -35,8 +35,7 @@ export class SearchByTitleYearModal extends Modal {
 			.setName('Year (optional)')
 			.addText((text) =>
 				text
-					// eslint-disable-next-line obsidianmd/ui/sentence-case
-					.setPlaceholder('e.g. 2010')
+					.setPlaceholder('2010')
 					.onChange((value) => {
 						yearInput = value;
 					}),
