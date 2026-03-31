@@ -12,8 +12,7 @@ export default class OmdbFetcher extends Plugin {
 
 		this.addCommand({
 			id: 'omdb:fetch-movie-data-by-title-year-from-filename',
-			// eslint-disable-next-line obsidianmd/ui/sentence-case
-			name: 'OMDb: Fetch movie data from filename',
+			name: 'OMDb: fetch movie data from filename',
 			editorCheckCallback: (checking, editor) => {
 				const view = this.app.workspace.getActiveViewOfType(MarkdownView);
 				if (!view) return false;
@@ -26,8 +25,7 @@ export default class OmdbFetcher extends Plugin {
 
 		this.addCommand({
 			id: 'omdb:fetch-movie-data-by-title-year',
-			// eslint-disable-next-line obsidianmd/ui/sentence-case
-			name: 'OMDb: Fetch movie data by title and year',
+			name: 'OMDb: fetch movie data by title and year',
 			editorCheckCallback: (checking, editor) => {
 				const view = this.app.workspace.getActiveViewOfType(MarkdownView);
 				if (!view) return false;
@@ -40,8 +38,7 @@ export default class OmdbFetcher extends Plugin {
 
 		this.addCommand({
 			id: 'omdb:fetch-movie-data-by-imdb-id',
-			// eslint-disable-next-line obsidianmd/ui/sentence-case
-			name: 'OMDb: Fetch movie data by IMDb ID',
+			name: 'OMDb: fetch movie data by IMDb ID',
 			editorCheckCallback: (checking, editor) => {
 				const view = this.app.workspace.getActiveViewOfType(MarkdownView);
 				if (!view) return false;
